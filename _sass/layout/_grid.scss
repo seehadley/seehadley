@@ -1,0 +1,24 @@
+.Grid {
+    &--gutters {
+        margin-left: (-$Grid-gutter-size);
+        > .Grid-col {
+            padding: 0 $Grid-gutter-size;
+        }
+    }
+}
+
+.Grid,
+.Grid--gutters {
+    &::before,
+    &::after {
+        content: "";
+        display: table;
+    }
+    &::after {
+        clear: both;
+    }
+}
+
+.Grid-col {
+    float: left;
+}

@@ -1,0 +1,43 @@
+// adapted from Solid: http://solid.buzzfeed.com/
+@mixin media-query($breakpoint) {
+  @if (map-get($breakpoints, $breakpoint)) == null {
+      @content;
+  }
+  @else {
+      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+          @content;
+      }
+  }
+}
+
+@mixin generate-breakpoint-prefixes {
+  // generate prefixed classes
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+      $breakpoint-prefix: ".u-#{$breakpoint-name}-";
+
+      @include media-query($breakpoint-name) {
+          #{$breakpoint-prefix} {
+              @content;
+          }
+      }
+  }
+}
+
+// Typography
+@mixin link-underline($color) {
+  
+  @if ($color == dark) {
+    border-bottom: $link-border-style $underline-color-dark;
+
+    &:hover {
+      border-color: $underline-color-dark-hover;
+    }
+  }
+  @else {
+    border-bottom: $link-border-style $underline-color-light;
+
+    &:hover {
+      border-color: $underline-color-light-hover;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.Project {
+  padding: $section-vertical-spacing 0;
+
+  border-bottom: 2px solid rgba(map-get($color, red), 0.2);
+
+  -webkit-font-smoothing: antialiased;
+
+  &-description {
+    margin-bottom: 1rem;
+    margin-top: 0;
+
+    color: map-get($color, darkgray);
+    font-size: map-get($font-size, size-2);    
+    line-height: 1.75rem;
+    // -webkit-font-smoothing: antialiased;
+  }
+
+  &-image {
+    margin-top: $section-vertical-spacing;
+    margin-bottom: 0;
+
+    border: 1px solid rgba(map-get($color, lightgray), 0.4);
+  }
+
+  &-caption,
+  &-metaText {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+
+    color: map-get($color, lightgray);
+    font-size: map-get($font-size, size-1);
+    // line-height: 1.75rem;
+    // -webkit-font-smoothing: antialiased;
+  }
+
+  &-caption {
+    margin-bottom: $section-vertical-spacing;
+    
+    text-align: center;
+  }
+
+  &-link {
+    padding-bottom: 0.1875rem;
+    color: map-get($color, darkgray);
+    text-decoration: none;
+
+    border-bottom: $link-border-style;
+    border-color: rgba(map-get($color, darkgray), 0.4);
+
+    &:hover {
+      border-color: rgba(map-get($color, darkgray), 0.8);
+    }
+  }
+
+  &-title {
+    @extend %page-section-heading;
+
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+}

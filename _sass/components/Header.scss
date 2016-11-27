@@ -1,0 +1,58 @@
+%header-style {
+  font-size: map-get($font-size, size-3);
+
+  color: map-get($color, white);
+  background-color: map-get($color, red);
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.Header,
+.Header--sm {
+  @extend %header-style;
+
+  &-body,
+  &-pageTitle {
+    margin: 0;
+    line-height: 1.75rem;
+  }
+
+  &-pageTitle {
+    font-size: map-get($font-size, size-3);    
+  }
+}
+
+%header-link-style {
+  @include link-underline(light);
+
+  padding-bottom: 0.1875rem;
+  color: map-get($color, white);
+  font-size: map-get($font-size, size-3);
+  text-decoration: none;
+}
+
+.Header-link,
+.Header-link--spaced {
+  @extend %header-link-style;
+}
+
+.Header {
+  padding: 2.5rem 0;
+}
+
+.Header--sm {
+  padding: 1rem 0;
+}
+
+.Header-homeLink {
+  display: inline-block;
+
+  color: map-get($color, white);
+  text-decoration: none;
+}
+
+.Header-link--spaced {
+  display: inline-block;
+  margin-right: 2rem;
+  margin-top: 0.33333rem;
+}

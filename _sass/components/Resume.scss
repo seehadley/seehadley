@@ -1,0 +1,19 @@
+.Resume {
+    padding: $section-vertical-spacing 0;
+}
+
+.Resume-header {
+    @extend %page-section-heading;
+}
+
+.Resume-sectionHeader {
+    color: map-get($color, lightgray);
+    font-size: map-get($font-size, size-2);
+    font-weight: normal;
+}
+
+.Resume-bodyCopy {
+    color: map-get($color, darkgray);
+    font-size: map-get($font-size, size-2);
+    line-height: 1.5;
+}

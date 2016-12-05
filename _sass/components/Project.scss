@@ -1,61 +1,124 @@
+$Project-one-background-color: #168368;
+$Project-padding-left: $padding-left;
+$Project-padding-vertical: 5em;
+
 .Project {
-  padding: $section-vertical-spacing 0;
+  padding-top: $Project-padding-vertical;
+  padding-bottom: $Project-padding-vertical;
+  padding-left: $Project-padding-left;
 
-  border-bottom: 2px solid rgba(map-get($color, red), 0.2);
-
+  color: #fff;
   -webkit-font-smoothing: antialiased;
 
-  &-description {
-    margin-bottom: 1rem;
-    margin-top: 0;
+  &--one {
+    @include angle(before, true);
+    @include angle(after, true);
 
-    color: map-get($color, darkgray);
-    font-size: map-get($font-size, size-2);    
-    line-height: 1.75rem;
-    // -webkit-font-smoothing: antialiased;
-  }
-
-  &-image {
-    margin-top: $section-vertical-spacing;
-    margin-bottom: 0;
-
-    border: 1px solid rgba(map-get($color, lightgray), 0.4);
-  }
-
-  &-caption,
-  &-metaText {
-    margin-bottom: 0;
-    margin-top: 0.5em;
-
-    color: map-get($color, lightgray);
-    font-size: map-get($font-size, size-1);
-    // line-height: 1.75rem;
-    // -webkit-font-smoothing: antialiased;
-  }
-
-  &-caption {
-    margin-bottom: $section-vertical-spacing;
-    
-    text-align: center;
-  }
-
-  &-link {
-    padding-bottom: 0.1875rem;
-    color: map-get($color, darkgray);
-    text-decoration: none;
-
-    border-bottom: $link-border-style;
-    border-color: rgba(map-get($color, darkgray), 0.4);
-
-    &:hover {
-      border-color: rgba(map-get($color, darkgray), 0.8);
-    }
-  }
-
-  &-title {
-    @extend %page-section-heading;
-
-    margin-bottom: 0;
-    margin-top: 1rem;
+    background-color: $Project-one-background-color;
   }
 }
+
+.Project-copy {
+  max-width: 38.095238095em; // 800px
+
+  font-family: $font-family-serif;
+  font-size: 1.3125rem;
+  line-height: 1.333333333;
+}
+
+.Project-metaText {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.466666667;
+  -webkit-font-smoothing: antialiased;
+
+  opacity: 0.8;
+}
+
+.Project-number {
+  display: none;
+
+  font-family: $font-family-sans-small;
+  font-size: 13px;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.Project-subtitle {
+  font-family: $font-family-sans;
+  font-size: 1.125rem;
+}
+
+.Project-title {
+  margin-top: 0;
+  margin-bottom: 1rem;;
+
+  color: #fff;
+  font-family: $font-family-sans;
+  font-size: 2rem;
+}
+
+// .Project {
+//   padding: $section-vertical-spacing 0;
+
+//   border-bottom: 2px solid rgba(map-get($color, red), 0.2);
+
+//   -webkit-font-smoothing: antialiased;
+
+//   &-description {
+//     margin-bottom: 1rem;
+//     margin-top: 0;
+
+//     color: map-get($color, darkgray);
+//     font-size: map-get($font-size, size-2);    
+//     line-height: 1.75rem;
+//     // -webkit-font-smoothing: antialiased;
+//   }
+
+//   &-image {
+//     margin-top: $section-vertical-spacing;
+//     margin-bottom: 0;
+
+//     border: 1px solid rgba(map-get($color, lightgray), 0.4);
+//   }
+
+//   &-caption,
+//   &-metaText {
+//     margin-bottom: 0;
+//     margin-top: 0.5em;
+
+//     color: map-get($color, lightgray);
+//     font-size: map-get($font-size, size-1);
+//     // line-height: 1.75rem;
+//     // -webkit-font-smoothing: antialiased;
+//   }
+
+//   &-caption {
+//     margin-bottom: $section-vertical-spacing;
+    
+//     text-align: center;
+//   }
+
+//   &-link {
+//     padding-bottom: 0.1875rem;
+//     color: map-get($color, darkgray);
+//     text-decoration: none;
+
+//     border-bottom: $link-border-style;
+//     border-color: rgba(map-get($color, darkgray), 0.4);
+
+//     &:hover {
+//       border-color: rgba(map-get($color, darkgray), 0.8);
+//     }
+//   }
+
+//   &-title {
+//     @extend %page-section-heading;
+
+//     margin-bottom: 0;
+//     margin-top: 1rem;
+//   }
+// }

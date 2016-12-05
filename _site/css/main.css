@@ -1,4 +1,4 @@
-.Project-title, .Resume-header {
+.Resume-header {
   color: #140f2d;
   font-size: 1.5rem;
   -webkit-font-smoothing: antialiased; }
@@ -571,7 +571,6 @@ img {
   max-width: 100%; }
 
 html {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px; }
 
 .Contact {
@@ -598,82 +597,123 @@ html {
     color: #595a6e;
     font-size: 0.8125rem; }
 
-.Header,
-.Header--sm {
-  font-size: 1rem;
-  color: #fff;
-  background-color: #d93a3d;
-  -webkit-font-smoothing: antialiased; }
-
-.Header-body, .Header-pageTitle,
-.Header--sm-body,
-.Header--sm-pageTitle {
-  margin: 0;
-  line-height: 1.75rem; }
-.Header-pageTitle,
-.Header--sm-pageTitle {
-  font-size: 1rem; }
-
-.Header-link,
-.Header-link--spaced {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-  padding-bottom: 0.1875rem;
-  color: #fff;
-  font-size: 1rem;
-  text-decoration: none; }
-  .Header-link:hover,
-  .Header-link--spaced:hover {
-    border-color: rgba(255, 255, 255, 0.8); }
-
 .Header {
-  padding: 2.5rem 0; }
+  position: relative;
+  z-index: 1;
+  padding-top: 6em;
+  padding-bottom: 6em;
+  font-size: 1rem;
+  padding-left: 12em; }
+  .Header:after {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; }
+  .Header:after {
+    bottom: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%; }
 
-.Header--sm {
-  padding: 1rem 0; }
+.Header-title {
+  color: #131112;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial Narrow", "Arial", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  font-stretch: condensed; }
 
-.Header-homeLink {
+.Header-copy {
+  max-width: 44.444444444em; }
+
+.Header-copy,
+.Header-link {
+  color: #131112;
+  font-family: "Georgia", serif;
+  font-size: 1.125rem; }
+
+.Header-link {
   display: inline-block;
-  color: #fff;
-  text-decoration: none; }
-
-.Header-link--spaced {
-  display: inline-block;
-  margin-right: 2rem;
-  margin-top: 0.33333rem; }
+  margin-right: 1.5em;
+  color: #131112;
+  text-decoration: none;
+  border-bottom: 1px solid #131112; }
 
 .Project {
-  padding: 3rem 0;
-  border-bottom: 2px solid rgba(217, 58, 61, 0.2);
+  padding-top: 5em;
+  padding-bottom: 5em;
+  padding-left: 12em;
+  color: #fff;
   -webkit-font-smoothing: antialiased; }
-  .Project-description {
-    margin-bottom: 1rem;
-    margin-top: 0;
-    color: #140f2d;
-    font-size: 0.9375rem;
-    line-height: 1.75rem; }
-  .Project-image {
-    margin-top: 3rem;
-    margin-bottom: 0;
-    border: 1px solid rgba(89, 90, 110, 0.4); }
-  .Project-caption, .Project-metaText {
-    margin-bottom: 0;
-    margin-top: 0.5em;
-    color: #595a6e;
-    font-size: 0.8125rem; }
-  .Project-caption {
-    margin-bottom: 3rem;
-    text-align: center; }
-  .Project-link {
-    padding-bottom: 0.1875rem;
-    color: #140f2d;
-    text-decoration: none;
-    border-bottom: 2px solid;
-    border-color: rgba(20, 15, 45, 0.4); }
-    .Project-link:hover {
-      border-color: rgba(20, 15, 45, 0.8); }
-  .Project-title {
-    margin-bottom: 0;
-    margin-top: 1rem; }
+  .Project--one {
+    position: relative;
+    z-index: 1;
+    position: relative;
+    z-index: 1;
+    background-color: #168368; }
+    .Project--one:before {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; }
+    .Project--one:before {
+      top: 0;
+      transform: skewY(-1.5deg);
+      transform-origin: 0 0; }
+    .Project--one:after {
+      background: inherit;
+      content: '';
+      display: block;
+      height: 50%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: -1;
+      -webkit-backface-visibility: hidden; }
+    .Project--one:after {
+      bottom: 0;
+      transform: skewY(1.5deg);
+      transform-origin: 0 100%; }
+
+.Project-copy {
+  max-width: 38.095238095em;
+  font-family: "Georgia", serif;
+  font-size: 1.3125rem;
+  line-height: 1.333333333; }
+
+.Project-metaText {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.466666667;
+  -webkit-font-smoothing: antialiased;
+  opacity: 0.8; }
+
+.Project-number {
+  display: none;
+  font-family: "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased; }
+
+.Project-subtitle {
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial Narrow", "Arial", sans-serif;
+  font-size: 1.125rem; }
+
+.Project-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed", "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed", "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold", "HelveticaNeue", "Helvetica Neue", "Helvetica", "Arial Narrow", "Arial", sans-serif;
+  font-size: 2rem; }
 
 .Resume {
   padding: 3rem 0; }

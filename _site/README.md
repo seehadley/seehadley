@@ -1,2 +1,0 @@
-# seehadley
-Portfolio site

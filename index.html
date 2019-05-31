@@ -30,7 +30,6 @@
       }
       .Main-link {
         padding: .1em 0;
-        white-space: nowrap;
 
         color: #859ad0;
         text-decoration: none;
@@ -44,15 +43,24 @@
       }
       .Main-text {
         font-family: 'Work Sans', sans-serif;
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: -.6px;
+      }
+
+      @media screen and (min-width: 620px) {
+        .Main-link {
+          white-space: nowrap;
+        }
+        .Main-text {
+          font-size: 3rem;
+        }
       }
     </style>
   </head>
   <body>
     <div class="Main">
         <div class="Main-text">
-          <a class="Main-link" href="https://www.linkedin.com/in/seehadley">Chris Hadley</a> is a designer at <a class="Main-link" href="https://xogroupinc.com/">XO Group</a> in Austin, TX.
+          <a class="Main-link" href="https://www.linkedin.com/in/seehadley">Chris Hadley</a> is a designer at <a class="Main-link" href="https://www.theknotww.com/">The Knot Worldwide</a> in Austin, TX.
         </div>
     </div>
   </body>
